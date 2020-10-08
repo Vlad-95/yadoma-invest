@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Я дома</title>
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="quiz">
+        <div class="quiz__wrap">
+            <div class="quiz__content">
+                <div class="quiz__header">
+                    <p class="quiz__header-text">Подберем удобный способ инвестиций в новостройки</p>
+                </div>
+                <form action="send.php" method="POST" class="quiz__form">
+
+                    <input name="utm_source" type="hidden">
+                    <input name="utm_medium" type="hidden">
+                    <input name="utm_campaign" type="hidden">
+                    <input name="utm_content" type="hidden">
+                    <input name="utm_term" type="hidden">
+
+                    <!-- -----------Выберите район----------- -->
+
+                    <div class="quiz__form-step quiz__form-step--active">
+                        <h2 class="quiz__form-step-title">Желаемый срок возврата вложений:</h2>
+                        <!-- <div class="quiz__form-step-attention">выберите один или несколько</div> -->
+
+                        <div class="quiz__form-step-content">
+                            <label class="quiz__form-label quiz__form-label_large">
+                                <input type="checkbox" class="quiz__form-checkbox"
+                                       name="desired_investment_return_period[1]"
+                                       value="Краткосрочная инвестиция – от 1 до 3х лет (покупка и продажа)">
+                                <div class="quiz__form-checkbox-text">
+                                    Краткосрочная инвестиция – от 1 до 3х лет (покупка и продажа)
+                                </div>
+                            </label>
+
+                            <label class="quiz__form-label quiz__form-label_large">
+                                <input type="checkbox" class="quiz__form-checkbox"
+                                       name="desired_investment_return_period[2]"
+                                       value="Долгосрочная инвестиция от 3 – 20 лет (под сдачу в аренду)">
+                                <div class="quiz__form-checkbox-text">
+                                    Долгосрочная инвестиция от 3 – 20 лет (под сдачу в аренду)
+                                </div>
+                            </label>
+
+                            <label class="quiz__form-label quiz__form-label_large">
+                                <input type="checkbox" class="quiz__form-checkbox"
+                                       name="desired_investment_return_period[3]"
+                                       value="Зависит от доходности">
+                                <div class="quiz__form-checkbox-text">
+                                    Зависит от доходности
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- ------------------------- -->
+
+                    <!-- -------------Размер планируемых вложений:------------- -->
+                    <div class="quiz__form-step">
+                        <h2 class="quiz__form-step-title">Размер планируемых вложений:</h2>
+                        <!-- <div class="quiz__form-step-attention">выберите один или несколько</div> -->
+
+                        <div class="quiz__form-step-content">
+                            <label class="quiz__form-label">
+                                <input type="checkbox" class="quiz__form-checkbox"
+                                       name="planned_investment_size[1]"
+                                       value="450 000 – 900 000 руб">
+                                <div class="quiz__form-checkbox-text">450 000 – 900 000 руб</div>
+                            </label>
+
+                            <label class="quiz__form-label">
+                                <input type="checkbox" class="quiz__form-checkbox"
+                                       name="planned_investment_size[2]"
+                                       value="900 000 –  1 500 000 руб">
+                                <div class="quiz__form-checkbox-text">900 000 –  1 500 000 руб</div>
+                            </label>
+
+                            <label class="quiz__form-label">
+                                <input type="checkbox" class="quiz__form-checkbox"
+                                       name="planned_investment_size[3]"
+                                       value="1 500 000 – 3 000 000 руб">
+                                <div class="quiz__form-checkbox-text">1 500 000 – 3 000 000 руб</div>
+                            </label>
+
+                            <label class="quiz__form-label">
+                                <input type="checkbox" class="quiz__form-checkbox"
+                                       name="planned_investment_size[4]"
+                                       value="3 000 000 – и более">
+                                <div class="quiz__form-checkbox-text">3 000 000 – и более</div>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+
+                    <!-- ------------Деньги:-------------- -->
+                    <div class="quiz__form-step">
+                        <h2 class="quiz__form-step-title">Деньги:</h2>
+                        <!-- <div class="quiz__form-step-attention">выберите один или несколько</div> -->
+
+                        <div class="quiz__form-step-content">
+                            <label class="quiz__form-label">
+                                <input type="checkbox" class="quiz__form-checkbox"
+                                       name="money_source[1]"
+                                       value="При себе">
+                                <div class="quiz__form-checkbox-text">При себе</div>
+                            </label>
+
+                            <label class="quiz__form-label">
+                                <input type="checkbox" class="quiz__form-checkbox"
+                                       name="money_source[2]"
+                                       value="На вкладе">
+                                <div class="quiz__form-checkbox-text">На вкладе</div>
+                            </label>
+
+                            <label class="quiz__form-label">
+                                <input type="checkbox" class="quiz__form-checkbox"
+                                       name="money_source[3]"
+                                       value="С продажи другого объекта">
+                                <div class="quiz__form-checkbox-text">С продажи другого объекта</div>
+                            </label>
+
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+
+                    <!-- -------------Вам доступны варианты------------- -->
+                    <div class="quiz__form-step">
+                        <div class="quiz__form-progress">
+                            <p class="quiz__form-progress-text">100%</p>
+
+                            <div class="quiz__form-progress-bar">
+                                <div class="quiz__form-progress-bar-item"></div>
+                                <div class="quiz__form-progress-bar-item"></div>
+                                <div class="quiz__form-progress-bar-item"></div>
+                            </div>
+                        </div>
+                        <div class="quiz__form-row">
+                            <p class="quiz__form-row-text">
+                                Вам доступно: от 2 до 7 объектов
+                            </p>
+                            <a href="javascript:;" class="quiz__form-row-btn quiz__form-row-btn--large js-next">
+                                Получить варианты инвестиций
+                            </a>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+
+                    <!-- -------------Форма------------- -->
+                    <div class="quiz__form-step">
+
+                        <div class="quiz__form-row">
+                            <div class="quiz__form-row-block">
+                                <label class="quiz__form-label">
+                                    <input type="text" class="quiz__form-input" placeholder="Имя"
+                                           name="name" required>
+
+                                </label>
+                                <label class="quiz__form-label">
+                                    <input type="tel" id="client_phone" class="quiz__form-input"
+                                           placeholder="Телефон"
+                                           name="tel" required>
+
+                                </label>
+                                <label class="quiz__form-label">
+                                    <input type="email" class="quiz__form-input" placeholder="Почта"
+                                           name="email" required>
+
+                                </label>
+                            </div>
+
+                            <div class="quiz__form-row-block">
+                                <p class="quiz__form-row-text">
+                                    Выберете предпочтительный способ получения подборки:
+                                </p>
+                                <input type="hidden" name="communication_method">
+                                <button type="submit" class="quiz__form-row-btn quiz__form-row-btn--email"
+                                        onclick="submit_with_communication_method('Email')">
+                                    <svg width="22" height="16">
+                                        <use xlink:href="img/icons/sprite.svg#quiz-email"></use>
+                                    </svg>
+                                    Получить по Email
+                                </button>
+
+                                <button type="submit" class="quiz__form-row-btn quiz__form-row-btn--whatsapp"
+                                        onclick="submit_with_communication_method('WhatsApp')">
+                                    <svg width="22" height="22">
+                                        <use xlink:href="img/icons/sprite.svg#quiz-whatsapp"></use>
+                                    </svg>
+                                    Получить по WhatsApp
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+                </form>
+                <div class="quiz__footer">
+                    <div class="quiz__footer-progress">
+                        <p class="quiz__footer-progress-text">Готово <span>0%</span></p>
+
+                        <div class="quiz__footer-progress-bar">
+                            <div class="quiz__footer-progress-bar-item"></div>
+                            <div class="quiz__footer-progress-bar-item"></div>
+                            <div class="quiz__footer-progress-bar-item"></div>
+                        </div>
+                    </div>
+
+                    <div class="quiz__footer-btns">
+                        <a href="javascript:;" class="quiz__footer-prev js-prev">
+                            <svg width="18" height="12">
+                                <use xlink:href="img/icons/sprite.svg#quiz-prev"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:;" class="quiz__footer-next js-next">
+                            Далее
+                            <svg width="18" height="12">
+                                <use xlink:href="img/icons/sprite.svg#quiz-next"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz__sidebar">
+                <a href="javascript:;" class="quiz__logo">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#header-logo"></use>
+                    </svg>
+                </a>
+                <a href="tel:+78125652927" class="quiz__help">
+                    <div class="quiz__help-icon">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#help-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="quiz__help-text">
+                        <p><strong>яДОМА</strong></p>
+                        <p>Отдел поддержки клиентов</p>
+                    </div>                    
+
+                </a>
+
+                <p class="quiz__help-number">+7 (812) 565-29-27</p>
+            </div>
+        </div>
+
+        <div class="quiz__bottom">
+            <a href="javascript:;" class="quiz__bottom-logo">
+                <svg>
+                    <use xlink:href="img/icons/sprite.svg#header-logo"></use>
+                </svg>
+                Сервис подбора новостроек
+            </a>
+            <div class="quiz__bottom-row">
+                <div class="quiz__bottom-row-item">
+                    <div class="quiz__bottom-row-item-icon">
+                        <p>1</p>
+                        <img src="img/icons/quiz1.png" alt="">
+                    </div>
+                    <p>
+                        Подберем квартиру в новостройке
+                    </p>
+                    <div class="quiz__bottom-row-item-label">
+                        Бесплатно
+                    </div>
+                </div>
+
+                <div class="quiz__bottom-row-item">
+                    <div class="quiz__bottom-row-item-icon">
+                        <p>2</p>
+                        <img src="img/icons/quiz2.png" alt="">
+                    </div>
+                    <p>
+                        Выберем и согласуем удобную форму оплаты квартиры
+                    </p>
+                    <div class="quiz__bottom-row-item-label">
+                        Бесплатно
+                    </div>
+                </div>
+
+                <div class="quiz__bottom-row-item">
+                    <div class="quiz__bottom-row-item-icon">
+                        <p>3</p>
+                        <img src="img/icons/quiz3.png" alt="">
+                    </div>
+                    <p>
+                        Организуем выезд на интересующие объекты
+                    </p>
+                    <div class="quiz__bottom-row-item-label">
+                        Бесплатно
+                    </div>
+                </div>
+
+                <div class="quiz__bottom-row-item">
+                    <div class="quiz__bottom-row-item-icon">
+                        <p>4</p>
+                        <img src="img/icons/quiz4.png" alt="">
+                    </div>
+                    <p>
+                        Проконтролируем заключение договора с застройщиком
+                    </p>
+                    <div class="quiz__bottom-row-item-label">
+                        Бесплатно
+                    </div>
+                </div>
+
+                <div class="quiz__bottom-row-item">
+                    <div class="quiz__bottom-row-item-icon">
+                        <p>5</p>
+                        <img src="img/icons/quiz5.png" alt="">
+                    </div>
+                    <p>
+                        Поможем на всех этапах приемки квартиры и получении ключей
+                    </p>
+                    <div class="quiz__bottom-row-item-label">
+                        В подарок
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/utm-common.js"></script>
+    <script src="js/utm-load.js"></script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(66281341, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/66281341" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2617597811835237');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2617597811835237&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?168",t.onload=function(){VK.Retargeting.Init("VK-RTRG-515246-b9MQj"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-515246-b9MQj" style="position:fixed; left:-999px;" alt=""/></noscript>
+</body>
+</html>
